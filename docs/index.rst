@@ -1,11 +1,40 @@
 Welcome to jaraco.ui documentation!
-========================================
+===================================
 
-.. automodule:: jaraco.ui
+.. toctree::
+   :maxdepth: 4
+
+jaraco.ui.editor module
+-----------------------
+
+.. automodule:: jaraco.ui.editor
     :members:
     :undoc-members:
     :show-inheritance:
 
+jaraco.ui.input module
+----------------------
+
+.. automodule:: jaraco.ui.input
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+jaraco.ui.progress module
+-------------------------
+
+.. automodule:: jaraco.ui.progress
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+jaraco.ui.menu module
+---------------------
+
+.. automodule:: jaraco.ui.menu
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 Indices and tables
 ==================
