@@ -9,35 +9,6 @@ import datetime
 
 import six
 
-class Menu(object):
-	"""
-	A simple command-line based menu
-	"""
-	def __init__(self, choices=None, formatter=str):
-		self.choices = choices or list()
-		self.formatter = formatter
-
-	def get_choice(self, prompt="> "):
-		n = len(self.choices)
-		number_width = len(str(n)) + 1
-		menu_fmt = '{number:{number_width}}) {choice}'
-		formatted_choices = map(self.formatter, self.choices)
-		for number, choice in zip(itertools.count(1), formatted_choices):
-			print(menu_fmt.format(**locals()))
-		print()
-		try:
-			answer = int(six.moves.input(prompt))
-			result = self.choices[answer - 1]
-		except ValueError:
-			print('invalid selection')
-			result = None
-		except IndexError:
-			print('invalid selection')
-			result = None
-		except KeyboardInterrupt:
-			result = None
-		return result
-
 
 @six.add_metaclass(abc.ABCMeta)
 class AbstractProgressBar(object):
@@ -102,6 +73,7 @@ class SimpleProgressBar(AbstractProgressBar):
 			for x in six.moves.range(1, 759):
 				bar3.report(x)
 				time.sleep(0.01)
+
 
 class TargetProgressBar(AbstractProgressBar):
 	def __init__(self, total=None, unit='', size=70):
