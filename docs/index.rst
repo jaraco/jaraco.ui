@@ -4,6 +4,8 @@ Welcome to jaraco.ui documentation!
 .. toctree::
    :maxdepth: 4
 
+   history
+
 jaraco.ui.editor module
 -----------------------
 
