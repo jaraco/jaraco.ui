@@ -6,6 +6,14 @@ Welcome to jaraco.ui documentation!
 
    history
 
+jaraco.ui.cmdline module
+------------------------
+
+.. automodule:: jaraco.ui.cmdline
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 jaraco.ui.editor module
 -----------------------
 
