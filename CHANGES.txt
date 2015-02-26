@@ -1,3 +1,8 @@
+1.2
+===
+
+Adopt ``cmdline`` module from ``jaraco.util``.
+
 1.1
 ===
 
