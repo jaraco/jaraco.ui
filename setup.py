@@ -28,6 +28,7 @@ setup_params = dict(
 	install_requires=[
 		'jaraco.meta',
 		'jaraco.text',
+		'six',
 	],
 	setup_requires=[
 		'hgtools',
