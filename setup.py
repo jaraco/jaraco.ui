@@ -26,7 +26,7 @@ setup_params = dict(
 	url="https://bitbucket.org/jaraco/jaraco.ui",
 	packages=setuptools.find_packages(),
 	install_requires=[
-		'jaraco.meta',
+		'jaraco.classes',
 		'jaraco.text',
 		'six',
 	],

@@ -1,3 +1,9 @@
+1.2.1
+=====
+
+Use ``jaraco.classes`` instead of ``jaraco.meta``, the latter of which was
+never released.
+
 1.2
 ===
 

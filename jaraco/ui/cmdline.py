@@ -1,7 +1,7 @@
 import argparse
 
 import six
-from jaraco import meta
+from jaraco.classes import meta
 from jaraco import text
 
 
