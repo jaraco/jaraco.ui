@@ -48,6 +48,15 @@ class AbstractProgressBar(object):
 		else:
 			print()
 
+	def iterate(self, iterable):
+		"""
+		Report the status as the iterable is consumed.
+		"""
+		with self:
+			for n, item in enumerate(iterable):
+				self.report(n)
+				yield item
+
 
 class SimpleProgressBar(AbstractProgressBar):
 
