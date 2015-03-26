@@ -53,7 +53,7 @@ class AbstractProgressBar(object):
 		Report the status as the iterable is consumed.
 		"""
 		with self:
-			for n, item in enumerate(iterable):
+			for n, item in enumerate(iterable, 1):
 				self.report(n)
 				yield item
 
