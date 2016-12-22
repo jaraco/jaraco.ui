@@ -1,3 +1,8 @@
+1.5
+===
+
+Clean up syntax, configure automatic releases.
+
 1.4
 ===
 
