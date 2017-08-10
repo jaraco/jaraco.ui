@@ -1,3 +1,9 @@
+1.6
+===
+
+Added ``cmdline.Extend``, an ``argparse.Action`` for use
+when nargs is used.
+
 1.5
 ===
 
