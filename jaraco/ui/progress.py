@@ -1,7 +1,8 @@
 # deprecated -- use TQDM
 
-from __future__ import (print_function, absolute_import, unicode_literals,
-	division)
+from __future__ import (
+	print_function, absolute_import, unicode_literals, division,
+)
 
 import time
 import sys
@@ -144,9 +145,9 @@ def countdown(template, duration=datetime.timedelta(seconds=5)):
 		remaining = deadline - datetime.datetime.now()
 		remaining = max(datetime.timedelta(), remaining)
 		msg = template.format(remaining.total_seconds())
-		print(msg, end=' '*10)
+		print(msg, end=' ' * 10)
 		sys.stdout.flush()
 		time.sleep(.1)
-		print('\b'*80, end='')
+		print('\b' * 80, end='')
 		sys.stdout.flush()
 	print()

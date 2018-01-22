@@ -11,7 +11,10 @@ import difflib
 
 import six
 
-class EditProcessException(RuntimeError): pass
+
+class EditProcessException(RuntimeError):
+	pass
+
 
 class EditableFile(object):
 	"""
@@ -34,8 +37,8 @@ class EditableFile(object):
 	"""
 	platform_default_editors = collections.defaultdict(
 		lambda: 'edit',
-		win32 = 'notepad',
-		linux2 = 'vi',
+		win32='notepad',
+		linux2='vi',
 	)
 	encoding = 'utf-8'
 

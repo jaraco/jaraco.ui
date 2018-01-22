@@ -4,6 +4,7 @@ import itertools
 
 import six
 
+
 class Menu(object):
 	"""
 	A simple command-line based menu

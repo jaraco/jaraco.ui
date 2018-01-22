@@ -5,6 +5,7 @@ This module currently provides a cross-platform getch function
 try:
 	# Windows
 	from msvcrt import getch
+	getch  # workaround for https://github.com/kevinw/pyflakes/issues/13
 except ImportError:
 	pass
 
