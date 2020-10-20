@@ -2,7 +2,7 @@ import argparse
 
 import six
 from jaraco.classes import meta
-from jaraco import text
+from jaraco import text  # type: ignore
 
 
 @six.add_metaclass(meta.LeafClassesMeta)

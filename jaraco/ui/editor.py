@@ -9,6 +9,8 @@ import collections
 import io
 import difflib
 
+from collections import Mapping
+
 import six
 
 
@@ -36,7 +38,7 @@ class EditableFile(object):
     other platforms.
     """
 
-    platform_default_editors = collections.defaultdict(
+    platform_default_editors: Mapping[str, str] = collections.defaultdict(
         lambda: 'edit',
         win32='notepad',
         linux2='vi',
