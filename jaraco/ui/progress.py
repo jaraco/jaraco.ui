@@ -1,23 +1,13 @@
 # deprecated -- use TQDM
 
-from __future__ import (
-    print_function,
-    absolute_import,
-    unicode_literals,
-    division,
-)
-
 import time
 import sys
 import itertools
 import abc
 import datetime
 
-import six
 
-
-@six.add_metaclass(abc.ABCMeta)
-class AbstractProgressBar(object):
+class AbstractProgressBar(metaclass=abc.ABCMeta):
     def __init__(self, unit='', size=70):
         """
         Size is the nominal size in characters
@@ -85,7 +75,7 @@ class SimpleProgressBar(AbstractProgressBar):
     def demo(cls):
         bar3 = cls(unit='cubes', size=30)
         with bar3:
-            for x in six.moves.range(1, 759):
+            for x in range(1, 759):
                 bar3.report(x)
                 time.sleep(0.01)
 
@@ -115,13 +105,13 @@ class TargetProgressBar(AbstractProgressBar):
     def demo(cls):
         bar1 = cls(100, 'blocks')
         with bar1:
-            for x in six.moves.range(1, 101):
+            for x in range(1, 101):
                 bar1.report(x)
                 time.sleep(0.05)
 
         bar2 = cls(758, size=50)
         with bar2:
-            for x in six.moves.range(1, 759):
+            for x in range(1, 759):
                 bar2.report(x)
                 time.sleep(0.01)
 

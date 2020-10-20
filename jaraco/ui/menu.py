@@ -1,8 +1,4 @@
-from __future__ import print_function, absolute_import, unicode_literals
-
 import itertools
-
-import six
 
 
 class Menu(object):
@@ -23,7 +19,7 @@ class Menu(object):
             print(menu_fmt.format(**locals()))
         print()
         try:
-            answer = int(six.moves.input(prompt))
+            answer = int(input(prompt))
             result = self.choices[answer - 1]
         except ValueError:
             print('invalid selection')

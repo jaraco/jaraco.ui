@@ -1,5 +1,3 @@
-from __future__ import unicode_literals, absolute_import
-
 import tempfile
 import os
 import sys
@@ -10,8 +8,6 @@ import io
 import difflib
 
 from collections import Mapping
-
-import six
 
 
 class EditProcessException(RuntimeError):
@@ -46,7 +42,7 @@ class EditableFile(object):
     encoding = 'utf-8'
 
     def __init__(self, data='', content_type='text/plain'):
-        self.data = six.text_type(data)
+        self.data = str(data)
         self.content_type = content_type
 
     def __enter__(self):

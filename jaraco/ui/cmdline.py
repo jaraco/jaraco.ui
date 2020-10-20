@@ -1,12 +1,10 @@
 import argparse
 
-import six
 from jaraco.classes import meta
 from jaraco import text  # type: ignore
 
 
-@six.add_metaclass(meta.LeafClassesMeta)
-class Command(object):
+class Command(metaclass=meta.LeafClassesMeta):
     """
     A general-purpose base class for creating commands for a command-line
     program using argparse. Each subclass of Command represents a separate
