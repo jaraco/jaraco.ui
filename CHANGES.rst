@@ -1,3 +1,8 @@
+v2.1.0
+======
+
+Require Python 3.6 or later.
+
 2.0.1
 =====
 
