@@ -7,7 +7,7 @@ import collections
 import io
 import difflib
 
-from collections import Mapping
+from typing import Mapping
 
 
 class EditProcessException(RuntimeError):
