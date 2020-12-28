@@ -1,3 +1,8 @@
+v2.2.0
+======
+
+Refreshed packaging.
+
 v2.1.0
 ======
 
