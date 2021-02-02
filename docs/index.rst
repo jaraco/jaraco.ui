@@ -1,4 +1,4 @@
-Welcome to jaraco.ui documentation!
+Welcome to |project| documentation!
 ===================================
 
 .. toctree::
