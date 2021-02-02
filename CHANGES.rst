@@ -1,3 +1,8 @@
+v2.3.0
+======
+
+Use PEP 420 for namespace.
+
 v2.2.0
 ======
 
