@@ -16,7 +16,7 @@ try:
     import tty
     import termios
 
-    def getch():
+    def getch():  # type: ignore
         fd = sys.stdin.fileno()
         old = termios.tcgetattr(fd)
         try:
