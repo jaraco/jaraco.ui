@@ -13,23 +13,23 @@ class Command(metaclass=meta.LeafClassesMeta):
     For example, one might use Command subclasses to implement the Mercurial
     command set::
 
-            class Commit(Command):
-                    @staticmethod
-                    def add_arguments(cls, parser):
-                            parser.add_argument('-m', '--message')
+        class Commit(Command):
+            @staticmethod
+            def add_arguments(cls, parser):
+                parser.add_argument('-m', '--message')
 
-                    @classmethod
-                    def run(cls, args):
-                            "Run the 'commit' command with args (parsed)"
+            @classmethod
+            def run(cls, args):
+                "Run the 'commit' command with args (parsed)"
 
-            class Merge(Command): pass
-            class Pull(Command): pass
-            ...
+        class Merge(Command): pass
+        class Pull(Command): pass
+        ...
 
     Then one could create an entry point for Mercurial like so::
 
-            def hg_command():
-                    Command.invoke()
+        def hg_command():
+            Command.invoke()
     """
 
     @classmethod
