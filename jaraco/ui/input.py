@@ -25,6 +25,5 @@ try:
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old)
 
-
 except ImportError:
     pass

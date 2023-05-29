@@ -55,7 +55,6 @@ class AbstractProgressBar(metaclass=abc.ABCMeta):
 
 
 class SimpleProgressBar(AbstractProgressBar):
-
     _PROG_DISPGLYPH = itertools.cycle(['|', '/', '-', '\\'])
 
     def get_bar(self, amt):
