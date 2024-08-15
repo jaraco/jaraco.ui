@@ -20,6 +20,8 @@ requires-python = ">=3.8"
 dependencies = [
 	"jaraco.classes",
 	"jaraco.text",
+	"named",
+	"typer",
 ]
 dynamic = ["version"]
 
