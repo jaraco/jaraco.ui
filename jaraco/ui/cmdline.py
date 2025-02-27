@@ -1,7 +1,7 @@
 import argparse
 
+import jaraco.text
 from jaraco.classes import meta
-from jaraco import text  # type: ignore
 
 
 class Command(metaclass=meta.LeafClassesMeta):
@@ -39,7 +39,7 @@ class Command(metaclass=meta.LeafClassesMeta):
 
     @classmethod
     def add_parser(cls, subparsers):
-        cmd_string = text.words(cls.__name__).lowered().dash_separated()
+        cmd_string = jaraco.text.words(cls.__name__).lowered().dash_separated()
         parser = subparsers.add_parser(cmd_string)
         parser.set_defaults(action=cls)
         cls.add_arguments(parser)
