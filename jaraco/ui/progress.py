@@ -1,10 +1,10 @@
 # deprecated -- use TQDM
 
-import time
-import sys
-import itertools
 import abc
 import datetime
+import itertools
+import sys
+import time
 
 
 class AbstractProgressBar(metaclass=abc.ABCMeta):
