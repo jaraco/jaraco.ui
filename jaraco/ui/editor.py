@@ -1,13 +1,12 @@
-import tempfile
-import os
-import sys
-import subprocess
-import mimetypes
 import collections
-import io
 import difflib
-
-from typing import Mapping
+import io
+import mimetypes
+import os
+import subprocess
+import sys
+import tempfile
+from collections.abc import Mapping
 
 
 class EditProcessException(RuntimeError):
