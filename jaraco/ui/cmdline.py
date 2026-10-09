@@ -73,4 +73,6 @@ class Extend(argparse.Action):
     """
 
     def __call__(self, parser, namespace, values, option_string=None):
-        getattr(namespace, self.dest).extend(values)
+        items = list(getattr(namespace, self.dest, None) or ())
+        items.extend(values)
+        setattr(namespace, self.dest, items)
