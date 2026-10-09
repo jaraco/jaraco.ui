@@ -20,6 +20,8 @@ class Menu(object):
         print()
         try:
             answer = int(input(prompt))
+            if not 1 <= answer <= n:
+                raise IndexError(answer)
             result = self.choices[answer - 1]
         except ValueError:
             print('invalid selection')
