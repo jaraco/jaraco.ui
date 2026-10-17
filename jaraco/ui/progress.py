@@ -1,10 +1,10 @@
 # deprecated -- use TQDM
 
-import time
-import sys
-import itertools
 import abc
 import datetime
+import itertools
+import sys
+import time
 
 
 class AbstractProgressBar(metaclass=abc.ABCMeta):
@@ -16,7 +16,7 @@ class AbstractProgressBar(metaclass=abc.ABCMeta):
         self.size = size
 
     def report(self, amt):
-        sys.stdout.write('\r%s' % self.get_bar(amt))
+        sys.stdout.write(f'\r{self.get_bar(amt)}')
         sys.stdout.flush()
 
     @abc.abstractmethod
@@ -85,7 +85,7 @@ class TargetProgressBar(AbstractProgressBar):
         Size is the nominal size in characters
         """
         self.total = total
-        super(TargetProgressBar, self).__init__(unit, size)
+        super().__init__(unit, size)
 
     def get_bar(self, amt):
         template = ' [{bar:<{bar_len}}]'
@@ -116,7 +116,7 @@ class TargetProgressBar(AbstractProgressBar):
 
     def finish(self):
         self.report(self.total)
-        super(TargetProgressBar, self).finish()
+        super().finish()
 
 
 def countdown(template, duration=datetime.timedelta(seconds=5)):

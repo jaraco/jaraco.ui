@@ -1,13 +1,13 @@
 import itertools
 
 
-class Menu(object):
+class Menu:
     """
     A simple command-line based menu
     """
 
     def __init__(self, choices=None, formatter=str):
-        self.choices = choices or list()
+        self.choices = choices or []
         self.formatter = formatter
 
     def get_choice(self, prompt="> "):

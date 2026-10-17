@@ -1,20 +1,19 @@
-import tempfile
-import os
-import sys
-import subprocess
-import mimetypes
 import collections
-import io
 import difflib
-
-from typing import Mapping
+import io
+import mimetypes
+import os
+import subprocess
+import sys
+import tempfile
+from collections.abc import Mapping
 
 
 class EditProcessException(RuntimeError):
     pass
 
 
-class EditableFile(object):
+class EditableFile:
     """
     EditableFile saves some data to a temporary file, launches a
     platform editor for interactive editing, and then reloads the data,
@@ -69,12 +68,12 @@ class EditableFile(object):
             cmd = [editor, self.name]
             try:
                 res = subprocess.call(cmd)
-            except Exception as e:
-                print("Error launching editor %(editor)s" % locals())
+            except Exception as e:  # noqa: BLE001 # report any launch failure to the user
+                print(f"Error launching editor {editor}")
                 print(e)
                 return
             if res != 0:
-                msg = '%(editor)s returned error status %(res)d' % locals()
+                msg = f'{editor} returned error status {res}'
                 raise EditProcessException(msg)
             new_data = self.read()
             if new_data != self.data:

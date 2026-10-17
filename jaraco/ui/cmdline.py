@@ -1,6 +1,7 @@
 import argparse
 
 from jaraco.classes import meta
+
 from jaraco import text  # type: ignore
 
 
